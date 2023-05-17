@@ -1,0 +1,25 @@
+{
+  "name": "lab6",
+  "version": "1.0.0",
+  "description": "lab6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Deepali Nagwade",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.6.7",
+    "axios": "^0.26.1",
+    "blueimp-md5": "^2.19.0",
+    "graphql": "^16.3.0",
+    "redis": "^4.0.6",
+    "redis-json": "^6.0.3",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
