@@ -15,11 +15,18 @@ const Collectors = () => {
   
 
   const handleChange = (e) => {
-    setAddCollector((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-      characterList: [],
-    }));
+
+    const input = e.target;
+    const name = input.value.trim();
+
+    if(name !== null || name || name.trim().length >0){
+      setAddCollector((prev) => ({
+        ...prev,
+        [e.target.name]: e.target.value,
+        characterList: [],
+      }));
+    }
+
   };
 
   const handleUnSelect = (id) => {
