@@ -126,7 +126,7 @@ const useStyles = makeStyles({
 	const buildCard = (venue) => {
 		return (
 			<Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={venue.id}>
-				<Card className={classes.card} variant='outlined'>
+					<Card className={classes.card} variant='outlined'style={{ height: '300px', width: '200px' }} >
 					<CardActionArea>
 						<Link to={`/venues/${venue.id}`}>
               <CardMedia
