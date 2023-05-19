@@ -73,7 +73,7 @@ const useStyles = makeStyles({
 		async function fetchData() {
 			try {
 				//console.log(page);
-				const result = await axios.get(    baseURL + extraURL +"&apikey=" + apiKey + "&page=" + pageNum);
+				const result = await axios.get(baseURL + extraURL +"&apikey=" + apiKey + "&page=" + pageNum);
 				setAttractionData(result.data._embedded.attractions);
 				setNextPage(false);
 				setLoading(false);
@@ -94,6 +94,7 @@ const useStyles = makeStyles({
 		async function fetchData() {
 			try {
 				console.log(`in fetch searchTerm: ${searchTerm}`);
+				searchTerm = searchTerm.trim().toLowerCase();
 				const result = await axios.get(
 					"https://app.ticketmaster.com/discovery/v2/attractions.json?apikey=hRDTD4SpvBCDCF39xCGw2GvmCENv2XH9&keyword=" + searchTerm
 				);
