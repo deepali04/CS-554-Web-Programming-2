@@ -6,6 +6,8 @@ const Search = (props) => {
 		console.log(e.target.value)
 	};
 	return (
+		<>
+		<br></br>
 		<form
 			method='POST'
 			onSubmit={(e) => {
@@ -19,6 +21,9 @@ const Search = (props) => {
 				<input autoComplete='off' type='text' name='searchTerm' onChange={handleChange} />
 			</label>
 		</form>
+		
+		</>
+		
 		
 	);
 };
