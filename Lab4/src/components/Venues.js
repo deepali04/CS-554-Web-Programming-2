@@ -128,29 +128,35 @@ const useStyles = makeStyles({
 			<Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={venue.id}>
 					<Card className={classes.card} variant='outlined'style={{ height: '300px', width: '200px' }} >
 					<CardActionArea>
-						<Link to={`/venues/${venue.id}`}>
               <CardMedia
                 className={classes.media}
                 component='img'
                 image={
                   venue.images
                     ? venue.images[0].url
-                    : noImage
+                    : noImage 
                 }
                 title='event image'
+								style={
+										{ width: '200px', height: '110px' } // Adjust the width and height values as needed
+								}
               />
 
 							<CardContent>
-								<Typography
-									className={classes.titleHead}
-									gutterBottom
-									variant='h6'
-									component='h3'
-								>
+							<Link to={`/venues/${venue.id}`}>
+								<Typography	className={classes.titleHead}	gutterBottom variant='h6'	component='h3' style={{ textDecoration: "None" }}>
 									{venue.name}
 								</Typography>
+								</Link>
+								<p>
+								{venue ? (
+								<p>{venue.address.line1+", " + venue.city.name + ", " + venue.state.stateCode}</p>
+								) : (
+									<dd>N/A</dd>
+								)}
+							</p>
 							</CardContent>
-						</Link>
+						
 					</CardActionArea>
 				</Card>
 			</Grid>
